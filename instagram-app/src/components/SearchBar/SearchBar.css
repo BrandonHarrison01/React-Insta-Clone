@@ -1,0 +1,21 @@
+.SearchBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Instagram{
+    width: 300px;
+    height: 100px;
+}
+
+input {
+    width: 250px;
+    height: 30px;
+    text-align: center;
+}
+
+.Nav{
+    width: 250px;
+    height: 100px;
+}

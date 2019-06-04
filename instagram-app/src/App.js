@@ -8,7 +8,9 @@ import CommentSection from './components/CommentSection/CommentSection';
 function App() {
   return (
     <div className="App">
-
+      <SearchBar />
+      {/* <PostContainer />
+      <CommentSection /> */}
     </div>
   );
 }
