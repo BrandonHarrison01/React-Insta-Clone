@@ -1,6 +1,7 @@
 import React from 'react';
 
 import './PostContainer.scss';
+import likecom from './img/likecom.png'
 
 import CommentSection from '../CommentSection/CommentSection';
 
@@ -12,8 +13,12 @@ function PostContainer(props){
                 <h3>{props.postProp.username}</h3>
             </div>
             <img src={props.postProp.imageUrl}/>
-            <h3>{props.postProp.likes} likes</h3>
-            {/* <CommentSection /> */}
+            <img src={likecom} className='likecom'/>
+            <h3 className='Likes'>{props.postProp.likes} likes</h3>
+            {props.postProp.comments.map((comment) => (
+            <CommentSection commentProp={comment} />
+            ))}
+            <input placeHolder="Add a comment..." />
         </div>
     )
 }
