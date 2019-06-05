@@ -5,21 +5,44 @@ import likecom from './img/likecom.png'
 
 import CommentSection from '../CommentSection/CommentSection';
 
-function PostContainer(props){
-    return(
-        <div className='PostContainer'>
-            <div className='PostHeader'>
-                <img src={props.postProp.thumbnailUrl}/>
-                <h3>{props.postProp.username}</h3>
+class PostContainer extends React.Component {
+
+    render () {
+        return(
+            <div>
+                {this.props.filteredPosts.length === 0 ? this.props.postProp.map((post) => {
+                    return (
+                        <div className='PostContainer'>
+                            <div className='PostHeader'>
+                                <img src={post.thumbnailUrl} />
+                                <h3>{post.username}</h3>
+                            </div>
+                            <img src={post.imageUrl} />
+                            <img src={likecom} className='likecom' />
+                            <h3 className='Likes'>{post.likes} likes</h3>
+                            <CommentSection comments={post.comments} />
+                            {/* <p>{props.postProp.timestamp}</p> */}
+                        </div>
+                )
+            }) : this.props.filteredPosts.map((post) => {
+                return (
+                    <div className='PostContainer'>
+                        <div className='PostHeader'>
+                            <img src={post.thumbnailUrl} />
+                            <h3>{post.username}</h3>
+                        </div>
+                        <img src={post.imageUrl} />
+                        <img src={likecom} className='likecom' />
+                        <h3 className='Likes'>{post.likes} likes</h3>
+                        <CommentSection comments={post.comments} />
+                        {/* <p>{props.postProp.timestamp}</p> */}
+                    </div>
+                )
+            })
+            }
             </div>
-            <img src={props.postProp.imageUrl}/>
-            <img src={likecom} className='likecom'/>
-            <h3 className='Likes'>{props.postProp.likes} likes</h3>
-            <CommentSection comments={props.postProp.comments}/>
-            {/* <p>{props.postProp.timestamp}</p> */}
-            {/* <input placeHolder="Add a comment..." /> */}
-        </div>
-    )
+        )
+    }
 }
 
 export default PostContainer;

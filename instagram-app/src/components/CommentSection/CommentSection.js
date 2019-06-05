@@ -26,7 +26,6 @@ class CommentSection extends React.Component {
     render() {
         return (
             <div className='CommentSection'>
-                {/* build map here */}
                 {this.state.comments.map((comment) => {
                 return(
                 <p><strong>{comment.username}</strong> {comment.text}</p>
