@@ -9,7 +9,7 @@ function SearchBar(){
     return (
         <div className='SearchBar'>
             <img className='Instagram' src={Instagram} />
-            <input placeholder='Search' />
+            <input type='text' name='search' placeholder='Search' />
             <img className='Nav' src={nav} />
         </div>
     )

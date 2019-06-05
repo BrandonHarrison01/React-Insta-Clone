@@ -15,10 +15,9 @@ function PostContainer(props){
             <img src={props.postProp.imageUrl}/>
             <img src={likecom} className='likecom'/>
             <h3 className='Likes'>{props.postProp.likes} likes</h3>
-            {props.postProp.comments.map((comment) => (
-            <CommentSection commentProp={comment} />
-            ))}
-            <input placeHolder="Add a comment..." />
+            <CommentSection comments={props.postProp.comments}/>
+            {/* <p>{props.postProp.timestamp}</p> */}
+            {/* <input placeHolder="Add a comment..." /> */}
         </div>
     )
 }

@@ -7,7 +7,13 @@ import dummyData from './dummy-data';
 
 class App extends React.Component {
   state={
-      dummyData: dummyData
+      dummyData: [],
+      search:'',
+      filteredPosts: []
+  }
+
+  componentDidMount(){
+    this.setState({dummyData: dummyData})
   }
 
   render() {
