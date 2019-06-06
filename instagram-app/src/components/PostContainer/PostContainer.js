@@ -18,12 +18,12 @@ class PostContainer extends React.Component {
                                 <h3>{post.username}</h3>
                             </div>
                             <img src={post.imageUrl} />
-                            <img src={likecom} className='likecom' />
+                            <img onClick={this.props.handleClick} src={likecom} className='likecom' />
                             <h3 className='Likes'>{post.likes} likes</h3>
                             <CommentSection comments={post.comments} />
                             {/* <p>{props.postProp.timestamp}</p> */}
                         </div>
-                )
+                    )
             }) : this.props.filteredPosts.map((post) => {
                 return (
                     <div className='PostContainer'>
@@ -32,7 +32,7 @@ class PostContainer extends React.Component {
                             <h3>{post.username}</h3>
                         </div>
                         <img src={post.imageUrl} />
-                        <img src={likecom} className='likecom' />
+                        <img onClick={this.props.handleClick} src={likecom} className='likecom' />
                         <h3 className='Likes'>{post.likes} likes</h3>
                         <CommentSection comments={post.comments} />
                         {/* <p>{props.postProp.timestamp}</p> */}
