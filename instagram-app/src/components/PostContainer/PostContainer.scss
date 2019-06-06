@@ -1,0 +1,29 @@
+.PostContainer {
+    // width: 640px;
+    // border: 1px solid #ddd;
+    // margin: 50px auto;
+
+    .PostHeader {
+        display: flex;
+        align-items: center;
+
+        img {
+            // width: 40px;
+            // border-radius: 100px;
+            // margin: 20px;
+        }
+
+    }
+
+    .Post {
+        width: 100%;
+    }
+
+    .likecom {
+        margin:  5px 15px;
+    }
+
+    .Likes {
+        margin: 5px 20px 20px;
+    }
+}
