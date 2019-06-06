@@ -36,7 +36,7 @@ class App extends React.Component {
     console.log(this.state.dummyData.id)
     return (
       <div className="App">
-        <ComponentFromWithAuthenticate />
+        {/* <ComponentFromWithAuthenticate /> */}
         <SearchBar newSearch={this.state.search} searchFilter={this.searchFilter} />
         <PostContainer postProp={this.state.dummyData} filteredPosts={this.state.filteredPosts} searchFilter={this.searchFilter} handleClick={this.handleClick} />
       </div>
